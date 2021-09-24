@@ -2,55 +2,39 @@ package Array;
 
 import java.util.Scanner;
 
-public class Score_1102 {
+public class Copyscore_1102 {
 
 		public static void main(String args[]){
+			String [] sub_name = {"국어", "영어", "수학", "자바", "C"};	
 			Scanner scan=new Scanner(System.in);
 			
 			String num, Sname; //학번, 이름
 			int kor, eng, math, java; //과목
+			int [] subj  = new int [sub_name.length+1] ; // 총점 방을 위해 하나 늘림
 			
 			System.out.print("학번 : ");
 			num=scan.next();
-
 			System.out.print("이름 : ");
 			Sname=scan.next();
-
-			System.out.print("국어 : ");
-			kor=scan.nextInt();
-			while(!(kor<0 && kor>100)) {
-				if(kor>=0 && kor<=100) break;
-				kor=scan.nextInt();
+			
+			for (int i=0; i<subj.length-1; i++ ) {
+				System.out.print(sub_name[i]+" 점수 : ");
+				subj[i]=scan.nextInt();
+				while(!(subj[i]<0 && subj[i]>100)) {
+					if(subj[i]>0 && subj[i]<=100) break;
+					System.out.print("다시입력 : ");
+					subj[i]=scan.nextInt();
+				}
 			}
-
-			System.out.print("영어 : ");
-			eng=scan.nextInt();
-			while(!(eng<0 && eng>100)) {
-				if(eng>=0 && eng<=100) break;
-				eng=scan.nextInt();
-				
-			}
-
-			System.out.print("수학 : ");
-			math=scan.nextInt();
-			while(!(math<0 && math>100)) {
-				if(math>=0 && math<=100) break;
-				math=scan.nextInt();
-				
-			}
-
-			System.out.print("자바 : ");
-			java=scan.nextInt();
-			while(!(java<0 && java>100)) {
-				if(java>=0 && java<=100) break;
-				java=scan.nextInt();
+			
+			for(int i=0; i<subj.length-1; i++) {
+				subj[subj.length-1]+=subj[i];
 				
 			}
 			
-			int total=kor+eng+math+java;
-			double average=(double)(total)/4;  //평균
+			double average=(double)(subj[subj.length-1])/(subj.length-1);  //평균
 
-			System.out.println("\n합계 : "+total);
+			System.out.println("\n합계 : "+subj[subj.length-1]);
 			System.out.println("평균 : "+average);
 			System.out.print("평점 : ");
 			
