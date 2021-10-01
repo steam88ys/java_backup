@@ -2,14 +2,14 @@ package Array;
 
 import java.util.Scanner;
 
-public class Merge {
+public class Array_sort_bubble {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		int [] a = new int [5];
 		int [] b = new int [5];
 		int [] c = new int [10];
-		int temp=0;
+		
 		int x=0, y=0, z=0;			
 		Scanner scan= new Scanner (System.in);
 		
@@ -18,15 +18,8 @@ public class Merge {
 			a[i] = scan.nextInt();
 		}
 		
-		for(int i=0; i<a.length; i++) {				// a 오름차순 정렬 (SelectionSort)
-			for(int j=(i+1); j<a.length; j++) {
-				if(a[i]>a[j]) {
-					temp=a[i];
-					a[i]=a[j];
-					a[j]=temp;
-				}
-			}
-		}
+		bubble(a);
+		
 		System.out.print("정렬 >>");
 		for(int i=0; i<a.length; i++) {				// a출력
 			System.out.print(" "+a[i]);
@@ -38,15 +31,8 @@ public class Merge {
 		for(int i=0; i < b.length; i++) {
 			b[i] = scan.nextInt();
 		}
-		for(int i=(b.length-2); i>=0; i--) {		// b 오름차순 정렬 (BubbleSort)
-			for(int j=0; j<=i; j++)
-				if(b[j]>b[j+1]) {
-					temp=b[j];
-					b[j]=b[j+1];
-					b[j+1]=temp;
-			}
-			
-		}
+		
+		bubble(b);
 		
 		System.out.print("정렬 >>");
 		for(int i=0; i<b.length; i++) {				// b출력
@@ -95,10 +81,22 @@ public class Merge {
 		}
 		
 		System.out.print("두 배열 정렬 >>");
-		for(int i=0; i<c.length; i++) {				// c 출력
+		for(int i=0; i<c.length && c[i] != 0 ; i++) {				// c 출력
 			System.out.print(" "+c[i]);
 		}
 		
+	}
+	static void bubble(int[] arr) {									// a, b정렬 메서드 public static이라 static이어야 함
+		int temp=0;
+		for(int i=(arr.length-2); i>=0; i--) {
+			for(int j=0; j<=i; j++)
+				if(arr[j]>arr[j+1]) {
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+			}
+			
+		}
 	}
 
 }

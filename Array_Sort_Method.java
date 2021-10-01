@@ -86,9 +86,9 @@ public static void main(String[] args) {
 		}
 		
 	}
-	static void sort(int[] arr) {									// 정렬 메서드 public static이라 static이어야 함
+	static void sort(int[] arr) {									// a, b정렬 메서드 public static이라 static이어야 함
 		int temp=0;
-		for(int i=0; i<arr.length; i++) {				
+		for(int i=0; i<arr.length-1; i++) {				
 			for(int j=(i+1); j<arr.length; j++) {
 				if(arr[i]>arr[j]) {
 					temp=arr[i];
