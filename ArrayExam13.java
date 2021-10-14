@@ -12,7 +12,7 @@ public class ArrayExam13 {
 			}
 		}
 		for(int i=0; i<a.length; i++) {
-			for(int j=0; j<=i; j++) {
+			for(int j=0; j<=i; j++) {			// 1행에 1개 출력, 2행에 2개 출력
 				System.out.print(a[i][j]+"  ");
 			}
 			System.out.println();
