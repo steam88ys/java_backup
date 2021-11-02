@@ -14,7 +14,7 @@ public class Test_16 {
 		
 		while(true)
 		{		
-			System.out.print("=> ");
+			System.out.print("0~100 사이의 정수를 입력(음수:종료) : ");
 			su= scan.nextInt();
 			
 			if(su<0) break;
