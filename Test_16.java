@@ -18,7 +18,7 @@ public class Test_16 {
 			su= scan.nextInt();
 			
 			if(su<0) break;
-			if(su>100) continue;
+			else if(su>100) continue;
 			cnt++;
 			sum+=su;
 		}
