@@ -2,9 +2,9 @@ package Class;
 
 // 클래스 정의
 class Car{
-	String 모델명;
+	String 모델명;	// 멤버변수
 	String 제조사;
-	void speedUp(){
+	void speedUp(){	// 멤버 메서드
 		System.out.println(모델명 +"SpeedUp");
 	}
 	void stop(){
@@ -17,6 +17,7 @@ class Car{
 		모델명=model;
 		제조사=comp;
 	}
+	//클래스 안에 들어있으면 멤버변수, 멤버 메서드임
 }
 
 public class Car_test {
@@ -37,3 +38,6 @@ public class Car_test {
 	}
 
 }
+
+// morning은 멤버를 4개 갖음 ( 모델명, 제조사, SpeedeUp(), Stop() )
+// morning, sm3 : 객체, morning : 인스턴스 객체
