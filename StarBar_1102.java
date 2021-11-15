@@ -5,45 +5,50 @@ public class StarBar_1102 {
 
 	public static void main(String[] args) {
 		int max = 0;
-		int min = 0;
+		int min = 100;
 		int cnt = 0;
+		int[] a = new int [5];
 		Scanner scan = new Scanner (System.in);
 		
 		int jumsu=0;
 		System.out.print("점수 입력 : ");
-		while(jumsu>=0 && jumsu<100) {
-			min = jumsu;
-			if(max<jumsu) max = jumsu;
-			if(min>jumsu) min = jumsu;
+		while(jumsu>=0 && jumsu<=100) {
 			jumsu = scan.nextInt();
+			
+			if(max<jumsu && jumsu<=100) max = jumsu;
+			if(min>jumsu && jumsu>=0) min = jumsu;
+			
+			if(jumsu/10==10) a[0]++;
+			switch(jumsu/10) {
+				case 9 :
+					a[0]++; break;
+				case 8 :
+					a[1]++; break;
+				case 7 :
+					a[2]++; break;
+				case 6 : 
+					a[3]++; break;
+				default :
+					a[4]++; break;
+			}
+			
 		}
 		
-		int[] a = new int [5];
-		switch(jumsu/10) {
-			case 9 :
-				a[0]++;
-			case 8 :
-				a[1]++;
-			case 7 :
-				a[2]++;
-			case 6 : 
-				a[3]++;
-			default :
-				a[4]++;
-		}
-		
-		// 2중 for문 사용해서 별 출력하기
-		int su3=90;
 		for(int i=0; i<a.length; i++) {
-			System.out.print(su3+"점 ");
-			su3-=10;
-			if(su3/10==9) System.out.print("이상");
-			else if(su3/10==8) System.out.print("대");
-			else if(su3/10==7) System.out.print("대");
-			else if(su3/10==6) System.out.print("대");
-			else System.out.print("미만");
-			
-			
+		
+			switch(i) {
+				case 0 :
+					System.out.print("90점 이상 : "); break;
+				case 1 :
+						System.out.print("80점 대 : "); break;
+				case 2 :
+						System.out.print("70점 대 : "); break;
+				case 3 :
+						System.out.print("60점 대 : "); break;
+				default : 
+						System.out.print("60점 미만 : "); break;
+			}
+				
 			for(int j=0; j<a[i]; j++) {
 				System.out.print("*");
 			}
