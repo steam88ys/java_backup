@@ -21,15 +21,18 @@ public class Test_19 {
 		}
 		
 		// 중간값 확인
-		for(int i=0; i<ballArr.length; i++) {
+		/*for(int i=0; i<ballArr.length; i++) {
 			System.out.print(ballArr[i]+" ");
-		}
+		}*/
 		
-		for(int i=0; i<ball3.length; i++) {
+		/*for(int i=0; i<ball3.length; i++) {
 			ball3[i] = ballArr[i];
-		}
+		}*/
 		
-		System.out.println();
+		// 방법3
+		System.arraycopy(ballArr, 0, ball3, 0, 3);
+		
+		
 		//System.out.println(ball3[0]+" "+ball3[1]+" "+ball3[2]);
 		
 		for(int i=0; i<ball3.length; i++) {
