@@ -1,56 +1,17 @@
-package test.class1;
+package test.field1;
 
 public class RunTV {
 
 	public static void main(String[] args) {
 
-		TV tv1 = new TV();
-		TV tv2 = new TV();
-		TV tv3 = new TV();
+		TV t1 = new TV("Black", 55);
+		TV t2 = new TV("Silver", 65);
+		TV t3 = new TV("Blue", 100);
 		
-		tv1.setProducer("LG");
-		tv1.setColor("White");
-		tv1.setSize(55);
+		System.out.printf("색상: %s, 크기: %d, 제조사: %s\n", t1.color, t1.size, t1.PRODUCER);
+		System.out.printf("색상: %s, 크기: %d, 제조사: %s\n", t2.color, t2.size, t2.PRODUCER);
+		System.out.printf("색상: %s, 크기: %d, 제조사: %s\n", t3.color, t3.size, t3.PRODUCER);
 		
-		tv2.setProducer("SAMSUNG");
-		tv2.setColor("BLACK");
-		tv2.setSize(65);
-		
-		tv3.setProducer("APPLE");
-		tv3.setColor("Silver");
-		tv3.setSize(77);
-		
-		System.out.println("===========================================================");
-		System.out.println(tv1.getProducer() + " TV");
-		System.out.println(tv1.getSize() + " 인치");
-		System.out.println(tv1.getColor() + " 색상");
-		tv1.powerOn();
-		for (int i = 0; i < 7; i++) {
-			tv1.upChannel();
-		}
-		
-		for (int i = 0; i < 10; i++) {
-			tv1.upVolume();
-		}
-		System.out.println("===========================================================");
-		
-		System.out.println("===========================================================");
-		System.out.println(tv3.getProducer() + " TV");
-		System.out.println(tv3.getSize() + " 인치");
-		System.out.println(tv3.getColor() + " 색상");
-		tv3.powerOn();
-		for (int i = 0; i < 7; i++) {
-			tv3.upChannel();
-		}
-		
-		for (int i = 0; i < 5; i++) {
-			tv3.upVolume();
-		}
-		tv3.downChannel();
-		tv3.downChannel();
-		
-		tv3.powerOff();
-		System.out.println("===========================================================");
 		
 	}
 

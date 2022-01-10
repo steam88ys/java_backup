@@ -1,13 +1,11 @@
-package test.this3;
+package test.field1;
 
 public class TV {
 
-	private String producer, color;
-	private int size;
+	String color;
+	int size;
+	public static String PRODUCER="LG¿¸¿⁄";
 	
-	public String getProducer() {
-		return producer;
-	}
 	public String getColor() {
 		return color;
 	}
@@ -15,21 +13,11 @@ public class TV {
 		return size;
 	}
 	
-	public TV (int size) {
-		this.size = size;
-		System.out.printf("TV( %d ) »£√‚µ .\n", size);
-	}
-	
-	public TV (int size, String color) {
-		this(size);	//this.size = size;
+	public TV(String color, int size) {
 		this.color = color;
-		System.out.printf("TV( %d, %s ) »£√‚µ .\n", size, color);
+		this.size = size;
 	}
 	
-	public TV (int size, String color, String producer) {
-		this(size, color);	//this.size = size; //this.color = color;
-		this.producer = producer;
-		System.out.printf("TV( %d, %s, %s ) »£√‚µ .\n", size, color, producer);
-	}
+	
 	
 }
