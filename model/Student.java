@@ -1,5 +1,7 @@
 package mvc.score.model;
 
+// MVC Modeling Áß¿¡¼­ Data Model
+
 public class Student {
 
 	private String name;
