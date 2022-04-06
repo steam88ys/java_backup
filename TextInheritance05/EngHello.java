@@ -9,8 +9,8 @@ public class EngHello extends Greeting{
 	}
 	
 	public void test() {
-		System.out.print(super.name);
-		super.sayHello();
+		System.out.print(super.name);	// super.name은 부모클래스의 name을 출력
+		super.sayHello();	// 부모클래스에 있는 sayHello()메소드 호출
 	}
 
 	public static void main (String[] args) {
