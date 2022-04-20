@@ -1,20 +1,19 @@
-package package01;
+package package03;
 
 public class ValueOfExam {
 
 	public static void main(String[] args) {
 
-		char ch = 'A';	// 문자
-		String strData1 = "A";	// 문자열
-		String strData2;
-		strData2 = String.valueOf(ch);
-		// ch가 가지고 있는 데이터를 문자열로 변경한다.
-		// valueOf(ch);메소드는 static으로 정의 되어 있어서 클래스 이름으로 호출
+		String stri = "123456";
+		String strd = "123.56";
 		
-		if(strData1.equals(strData2))
-			System.out.println("같음");
-		else
-			System.out.println("다름");
+		System.out.println(Integer.valueOf(stri));
+		// stri가 가리키는 문자열을 정수형 숫자로 변경
+		System.out.println(Double.valueOf(strd));
+		// strd가 가리키는 문자열을 실수형 숫자로 변경
+		// 따라서 valueOf()메소드는 문자열을 숫자로 변경한다.
+		
+		System.out.println(Integer.valueOf(stri) + Double.valueOf(strd));
 		
 	}
 
