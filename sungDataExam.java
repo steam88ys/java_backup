@@ -23,7 +23,6 @@ public class sungDataExam {
 			fw = new FileWriter(new File(fname));
 			bw = new BufferedWriter(fw);
 			
-			// 문제점1. 배열 넣고 출력하는거
 			String[] n = {"학번", "이름", "국어", "영어", "수학", "총점", "평균", "학점", "등수"};
 			for(int k = 0; k<9; k++) {
 				bw.write(n[k]+"\t");
@@ -32,7 +31,6 @@ public class sungDataExam {
 			bw.write("====================================================================");
 			bw.newLine();
 			
-			// 문제점2. length
 			for(int j = 0; j< length; j++) {
 				
 				bw.write(num[j] + "\t" + name[j] + "\t" + kor[j] + "\t" + eng[j] +"\t" + math[j] 
